@@ -1,0 +1,57 @@
+<section id="skills" class="py-20 bg-gradient-to-b from-white to-blue-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+        Le mie <span class="text-blue-600">Competenze</span>
+      </h2>
+      <div class="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Tecnologie e abilità che mi caratterizzano
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <!-- Hard Skills -->
+      <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-100">
+        <div class="flex items-center mb-8">
+          <div class="p-3 bg-blue-600 rounded-lg mr-4 shadow-md">
+            <i class="fas fa-laptop-code text-white text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-800">Hard Skills</h3>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+          @for (skill of hardSkills; track skill.name) {
+            <div class="bg-gradient-to-br from-blue-50 to-white p-4 rounded-xl border border-blue-100 flex flex-col items-center justify-center text-center h-32 transform hover:scale-[1.03] transition-transform hover:shadow-md">
+              <div class="p-3 bg-white rounded-full mb-2 shadow-inner">
+                <i class="{{skill.icon}} text-blue-600 text-2xl"></i>
+              </div>
+              <span class="font-medium text-gray-800 text-sm px-2">{{skill.name}}</span>
+            </div>
+          }
+        </div>
+      </div>
+
+      <!-- Soft Skills -->
+      <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-100">
+        <div class="flex items-center mb-8">
+          <div class="p-3 bg-blue-600 rounded-lg mr-4 shadow-md">
+            <i class="fas fa-brain text-white text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-800">Soft Skills</h3>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+          @for (skill of softSkills; track skill.name) {
+            <div class="bg-gradient-to-br from-blue-50 to-white p-4 rounded-xl border border-blue-100 flex flex-col items-center justify-center text-center h-32 transform hover:scale-[1.03] transition-transform hover:shadow-md">
+              <div class="p-3 bg-white rounded-full mb-2 shadow-inner">
+                <i class="{{skill.icon}} text-blue-600 text-xl"></i>
+              </div>
+              <span class="font-medium text-gray-800 text-sm px-2">{{skill.name}}</span>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
